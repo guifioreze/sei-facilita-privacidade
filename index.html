@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de privacidade · SEI Facilita</title>
+<style>
+  :root { --fundo: #ffffff; --texto: #1a1a1a; --texto-2: #4a5360; --azul: #1d3f72; --borda: #d5d9df; --superficie: #f0f2f5; color-scheme: light; }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) { --fundo: #1b1d21; --texto: #e6e8eb; --texto-2: #aab2bd; --azul: #8fb3ec; --borda: #4a5058; --superficie: #25282e; color-scheme: dark; }
+  }
+  :root[data-theme="dark"] { --fundo: #1b1d21; --texto: #e6e8eb; --texto-2: #aab2bd; --azul: #8fb3ec; --borda: #4a5058; --superficie: #25282e; color-scheme: dark; }
+  body { margin: 0; background: var(--fundo); color: var(--texto); font: 16px/1.6 system-ui, "Segoe UI", sans-serif; }
+  main { max-width: 68ch; margin: 0 auto; padding: 32px 16px 64px; }
+  h1 { font-size: 28px; line-height: 1.2; margin: 0 0 4px; color: var(--azul); }
+  h2 { font-size: 19px; margin: 32px 0 8px; }
+  p, li { color: var(--texto); }
+  .nota { color: var(--texto-2); font-size: 14px; }
+  ul { padding-left: 22px; }
+  li { margin: 4px 0; }
+  table { border-collapse: collapse; width: 100%; font-size: 15px; margin: 8px 0; }
+  th, td { text-align: left; vertical-align: top; padding: 8px; border-bottom: 1px solid var(--borda); }
+  th { background: var(--superficie); font-weight: 600; }
+  code { font-size: 14px; background: var(--superficie); padding: 1px 4px; border-radius: 3px; }
+  @media (max-width: 520px) { table, thead, tbody, tr, th, td { display: block; } th { border-bottom: 0; } }
+</style>
+</head>
+<body>
+<main>
+<h1>Política de privacidade do SEI Facilita</h1>
+<p class="nota">Vigente desde 8 de outubro de 2026. Extensão do Chrome não oficial, feita por servidor do Tribunal de Justiça do Estado do Rio Grande do Sul (TJRS), sem vínculo com o TJRS nem com os mantenedores do SEI.</p>
+
+<h2>Em resumo</h2>
+<ul>
+  <li>A extensão funciona inteiramente no seu navegador. <strong>Não existe servidor da extensão</strong>: nada é enviado ao autor nem a terceiros.</li>
+  <li>Ela lê as telas do SEI do TJRS na sua própria sessão, só para as funções que você usa.</li>
+  <li>O conteúdo de processos e documentos fica <strong>apenas na memória</strong> da aba e só sai do navegador quando você manda: para o Copilot do tribunal, para a GAIA Minuta ou para uma pasta do seu computador.</li>
+  <li>Preferências e marcas pessoais ficam no armazenamento do Chrome, na sua conta.</li>
+  <li>Não há anúncios, rastreamento, análise de uso nem venda de dados.</li>
+</ul>
+
+<h2>Onde a extensão atua</h2>
+<p>Só em três endereços, todos do ambiente de trabalho do TJRS:</p>
+<ul>
+  <li><code>sei.tjrs.jus.br</code>: o SEI do TJRS, onde a extensão melhora as telas (lista de processos, prazos, árvore, editor, bloco de assinatura) e lê processos para enviar à IA;</li>
+  <li><code>copilot.cloud.microsoft</code>: o Copilot do Microsoft 365 contratado pelo tribunal, onde a extensão anexa o pacote que você pediu para enviar;</li>
+  <li><code>gaiaminuta.tjrs.jus.br</code>: a GAIA Minuta do TJRS, com o mesmo papel.</li>
+</ul>
+<p>Em qualquer outro site a extensão não roda e não lê nada.</p>
+
+<h2>Que dados são lidos e para quê</h2>
+<table>
+  <thead><tr><th>Dado</th><th>Para quê</th><th>Fica guardado?</th></tr></thead>
+  <tbody>
+    <tr><td>Telas do SEI: lista de processos, número, tipo, especificação, atribuição, marcadores, prazos, árvore de documentos</td><td>Mostrar as melhorias na tela (ordenar, agrupar, etiquetas, prazos, leitor do bloco)</td><td>Não. Só na memória da aba aberta.</td></tr>
+    <tr><td>Conteúdo de documentos e processos que você escolhe enviar</td><td>Montar o pacote em Markdown com o prompt escolhido</td><td>Não. Só na memória, até a entrega.</td></tr>
+    <tr><td>Nome, cargo, chefia e instruções da unidade que você digita nas opções</td><td>Assinar as minutas e orientar a IA com o que é próprio da sua unidade</td><td>Sim, no armazenamento do Chrome (sincronizado pela sua conta).</td></tr>
+    <tr><td>Seu usuário e sua unidade no SEI (lidos da tela)</td><td>Filtrar "meus processos" e preencher o pacote</td><td>Sim, no armazenamento local do Chrome, neste computador.</td></tr>
+  </tbody>
+</table>
+
+<h2>Para onde o conteúdo vai</h2>
+<p>Só para o destino que você escolhe, e só quando você clica:</p>
+<ul>
+  <li><strong>Copilot do tribunal</strong> ou <strong>GAIA Minuta</strong>: a extensão anexa os arquivos e o texto do prompt na página aberta. O envio de fato continua sendo seu: a extensão não clica em Enviar nem em Gerar. O tratamento dos dados nesses serviços segue as regras do TJRS e dos próprios serviços.</li>
+  <li><strong>Pasta do computador</strong>: em "Exportar pacote", os arquivos são gravados em <code>Downloads/sei-facilita/</code>, e o registro desses downloads é apagado do histórico do Chrome (os arquivos ficam).</li>
+</ul>
+
+<h2>O que fica guardado no Chrome</h2>
+<p>No armazenamento da extensão (o Chrome sincroniza entre os seus computadores quando a sincronização está ligada na sua conta):</p>
+<ul>
+  <li>opções da extensão (funções ligadas, ordem e agrupamento da lista, largura da árvore, destino padrão, modelo do Copilot);</li>
+  <li>seus prompts editados e criados;</li>
+  <li>os dados que você digita em "Seus dados nas minutas": seu nome e cargo, o nome e o cargo da sua chefia e as instruções da sua unidade. Eles entram nos prompts e nos pacotes que você envia à IA;</li>
+  <li>marcas pessoais que você faz e que nunca vão ao SEI: <strong>favoritos</strong> (número, tipo e especificação do processo), <strong>histórico dos últimos processos visitados</strong> (número e tipo), <strong>etiquetas pessoais</strong> e marcas de <strong>"não visualizado"</strong> (por número de processo), cores de marcadores e etiquetas.</li>
+</ul>
+<p>O conteúdo de documentos nunca é gravado. Endereços do SEI com código de acesso (<code>infra_hash</code>) também nunca são guardados.</p>
+
+<h2>Ações no SEI</h2>
+<p>A extensão não salva, assina, tramita nem envia nada no SEI por conta própria. As poucas gravações acontecem só pelo seu clique e repetem o que a tela do SEI faria: salvar uma anotação que você escreveu e repassar ao botão "Assinar" do SEI os documentos que você selecionou (a senha é pedida pelo próprio SEI).</p>
+
+<h2>Como apagar seus dados</h2>
+<ul>
+  <li>Desinstalar a extensão apaga tudo o que ela guardou neste computador.</li>
+  <li>Os dados sincronizados podem ser apagados em <code>chrome://settings/syncSetup</code> › "Revisar seus dados sincronizados", ou removendo a extensão de todos os computadores.</li>
+  <li>Os pacotes exportados ficam na pasta <code>Downloads/sei-facilita/</code> e podem ser apagados como qualquer arquivo.</li>
+</ul>
+
+<h2>Uso limitado</h2>
+<p>O uso das informações recebidas pela extensão segue a Política de Dados do Usuário da Chrome Web Store, incluindo os requisitos de Uso Limitado: os dados servem só às funções descritas acima, não são transferidos a terceiros, não são usados para publicidade nem para avaliar crédito e não são lidos por pessoas.</p>
+
+<h2>Mudanças nesta política</h2>
+<p>Mudanças relevantes serão publicadas nesta página, com a nova data de vigência, antes de entrarem em vigor numa versão da extensão.</p>
+</main>
+</body>
+</html>
