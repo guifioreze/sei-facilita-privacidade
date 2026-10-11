@@ -28,7 +28,7 @@
 <body>
 <main>
 <h1>Política de privacidade do SEI Facilita</h1>
-<p class="nota">Vigente desde 9 de outubro de 2026 (versão 0.18.0). Extensão do Chrome não oficial, criada por Guilherme Fioreze Santos, servidor do Tribunal de Justiça do Estado do Rio Grande do Sul (TJRS), lotado na GP-ASSEST, sem vínculo oficial com o TJRS nem com os mantenedores do SEI.</p>
+<p class="nota">Vigente desde 11 de outubro de 2026 (versão 0.19.0). Extensão do Chrome não oficial, criada por Guilherme Fioreze Santos, servidor do Tribunal de Justiça do Estado do Rio Grande do Sul (TJRS), lotado na GP-ASSEST, sem vínculo oficial com o TJRS nem com os mantenedores do SEI.</p>
 
 <h2>Em resumo</h2>
 <ul>
@@ -56,6 +56,8 @@
     <tr><td>Conteúdo de documentos e processos que você escolhe enviar</td><td>Montar o pacote em Markdown com o prompt escolhido</td><td>Não. Só na memória, até a entrega.</td></tr>
     <tr><td>Nome, cargo, chefia e instruções da unidade que você digita nas opções</td><td>Assinar as minutas e orientar a IA com o que é próprio da sua unidade</td><td>Sim, no armazenamento do Chrome (sincronizado pela sua conta).</td></tr>
     <tr><td>Seu usuário e sua unidade no SEI (lidos da tela)</td><td>Filtrar "meus processos" e preencher o pacote</td><td>Sim, no armazenamento local do Chrome, neste computador.</td></tr>
+    <tr><td>Telas dos blocos de assinatura (lidas uma de cada vez, só na tela "Blocos de Assinatura")</td><td>Mostrar quantos documentos de cada bloco estão sem assinatura</td><td>Não. Só a contagem, na memória da aba aberta.</td></tr>
+    <tr><td>Arquivos que você solta na árvore do processo</td><td>Incluí-los no processo como documentos externos, pelo mesmo envio da tela "Registrar Documento Externo" do SEI, quando você clica em "Incluir"</td><td>Não. Vão direto ao SEI, na sua sessão.</td></tr>
   </tbody>
 </table>
 
@@ -64,6 +66,7 @@
 <ul>
   <li><strong>Copilot do tribunal</strong> ou <strong>GAIA Minuta</strong>: a extensão anexa os arquivos e o texto do prompt na página aberta. O envio de fato continua sendo seu: a extensão não clica em Enviar nem em Gerar. O tratamento dos dados nesses serviços segue as regras do TJRS e dos próprios serviços.</li>
   <li><strong>Pasta do computador</strong>: em "Exportar pacote", os arquivos são gravados em <code>Downloads/sei-facilita/</code>, e o registro desses downloads é apagado do histórico do Chrome (os arquivos ficam).</li>
+  <li><strong>Cópia de segurança</strong> (nas opções): "Baixar cópia de tudo" grava num arquivo JSON, na pasta de downloads, o que a extensão guarda para você (opções, prompts, dados das minutas, favoritos, histórico de visitados, etiquetas, marcas e cores). O arquivo tem números e tipos de processos: guarde-o com cuidado. "Substituir tudo por uma cópia…" lê um arquivo desses que você escolhe e, antes, baixa uma cópia do que havia. Nada disso vai a outro lugar.</li>
 </ul>
 
 <h2>O que fica guardado no Chrome</h2>
@@ -77,13 +80,13 @@
 <p>O conteúdo de documentos nunca é gravado. Endereços do SEI com código de acesso (<code>infra_hash</code>) também nunca são guardados.</p>
 
 <h2>Ações no SEI</h2>
-<p>A extensão não salva, assina, tramita nem envia nada no SEI por conta própria. As poucas gravações acontecem só pelo seu clique e repetem o que a tela do SEI faria: salvar uma anotação que você escreveu, repassar ao botão "Assinar" do SEI os documentos que você selecionou e, na janela de vários blocos, repassar ao ícone "Assinar" da linha o bloco que você escolheu assinar (a senha é pedida pelo próprio SEI).</p>
+<p>A extensão não salva, assina, tramita nem envia nada no SEI por conta própria. As poucas gravações acontecem só pelo seu clique e repetem o que a tela do SEI faria: salvar uma anotação que você escreveu; repassar ao botão "Assinar" do SEI os documentos que você selecionou e, na janela de vários blocos, repassar ao ícone "Assinar" da linha o bloco que você escolheu assinar (a senha é pedida pelo próprio SEI); atribuir o processo à pessoa que você escolheu, pelo mesmo envio da tela "Atribuir Processo"; e incluir como documentos externos os arquivos que você soltou na árvore, pelo mesmo envio da tela "Registrar Documento Externo". Em "Iniciar processo" e "Incluir Documento", escolher o tipo só abre o formulário do SEI: nada é criado até você salvar lá.</p>
 
 <h2>Como apagar seus dados</h2>
 <ul>
   <li>Desinstalar a extensão apaga tudo o que ela guardou neste computador.</li>
   <li>Os dados sincronizados podem ser apagados em <code>chrome://settings/syncSetup</code> › "Revisar seus dados sincronizados", ou removendo a extensão de todos os computadores.</li>
-  <li>Os pacotes exportados ficam na pasta <code>Downloads/sei-facilita/</code> e podem ser apagados como qualquer arquivo.</li>
+  <li>Os pacotes exportados ficam na pasta <code>Downloads/sei-facilita/</code>, e as cópias de segurança na pasta de downloads; podem ser apagados como qualquer arquivo.</li>
 </ul>
 
 <h2>Uso limitado</h2>
