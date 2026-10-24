@@ -28,7 +28,7 @@
 <body>
 <main>
 <h1>Política de privacidade do SEI Facilita</h1>
-<p class="nota">Vigente desde 11 de outubro de 2026 (versão 0.19.0). Extensão do Chrome não oficial, criada por Guilherme Fioreze Santos, servidor do Tribunal de Justiça do Estado do Rio Grande do Sul (TJRS), lotado na GP-ASSEST, sem vínculo oficial com o TJRS nem com os mantenedores do SEI.</p>
+<p class="nota">Vigente desde 24 de outubro de 2026 (versão 0.20.0; a anterior valia desde 11 de outubro de 2026). Extensão do Chrome não oficial, criada por Guilherme Fioreze Santos, servidor do Tribunal de Justiça do Estado do Rio Grande do Sul (TJRS), lotado na GP-ASSEST, sem vínculo oficial com o TJRS nem com os mantenedores do SEI.</p>
 
 <h2>Em resumo</h2>
 <ul>
@@ -43,7 +43,7 @@
 <p>Só em três endereços, todos do ambiente de trabalho do TJRS:</p>
 <ul>
   <li><code>sei.tjrs.jus.br</code>: o SEI do TJRS, onde a extensão melhora as telas (lista de processos, prazos, árvore, editor, bloco de assinatura) e lê processos para enviar à IA;</li>
-  <li><code>copilot.cloud.microsoft</code>: o Copilot do Microsoft 365 contratado pelo tribunal, onde a extensão anexa o pacote que você pediu para enviar;</li>
+  <li><code>copilot.cloud.microsoft</code>: o Copilot do Microsoft 365 contratado pelo tribunal, onde a extensão anexa o pacote que você pediu para enviar e, quando você clica em "Levar ao SEI", lê a minuta da resposta para inseri-la no editor do SEI;</li>
   <li><code>gaiaminuta.tjrs.jus.br</code>: a GAIA Minuta do TJRS, com o mesmo papel.</li>
 </ul>
 <p>Em qualquer outro site a extensão não roda e não lê nada.</p>
@@ -58,6 +58,8 @@
     <tr><td>Seu usuário e sua unidade no SEI (lidos da tela)</td><td>Filtrar "meus processos" e preencher o pacote</td><td>Sim, no armazenamento local do Chrome, neste computador.</td></tr>
     <tr><td>Telas dos blocos de assinatura (lidas uma de cada vez, só na tela "Blocos de Assinatura")</td><td>Mostrar quantos documentos de cada bloco estão sem assinatura</td><td>Não. Só a contagem, na memória da aba aberta.</td></tr>
     <tr><td>Arquivos que você solta na árvore do processo</td><td>Incluí-los no processo como documentos externos, pelo mesmo envio da tela "Registrar Documento Externo" do SEI, quando você clica em "Incluir"</td><td>Não. Vão direto ao SEI, na sua sessão.</td></tr>
+    <tr><td>Minuta de uma resposta do Copilot (entre as marcas de início e fim, ou o trecho que você selecionou)</td><td>Inseri-la no documento aberto no editor do SEI que você escolhe, quando você clica em "Levar ao SEI"</td><td>Não. Só na memória, até entrar no editor; nada é salvo no SEI.</td></tr>
+    <tr><td>Marcadores e atribuição, na sua unidade, dos processos que você envia (telas "Gerenciar Marcador" e árvore de cada processo)</td><td>Retirá-los antes do envio, quando você marca "Remover marcadores" ou "Remover atribuição" na tela "Enviar Processo"</td><td>Não. Só na memória, durante o envio.</td></tr>
   </tbody>
 </table>
 
@@ -80,7 +82,7 @@
 <p>O conteúdo de documentos nunca é gravado. Endereços do SEI com código de acesso (<code>infra_hash</code>) também nunca são guardados.</p>
 
 <h2>Ações no SEI</h2>
-<p>A extensão não salva, assina, tramita nem envia nada no SEI por conta própria. As poucas gravações acontecem só pelo seu clique e repetem o que a tela do SEI faria: salvar uma anotação que você escreveu; repassar ao botão "Assinar" do SEI os documentos que você selecionou e, na janela de vários blocos, repassar ao ícone "Assinar" da linha o bloco que você escolheu assinar (a senha é pedida pelo próprio SEI); atribuir o processo à pessoa que você escolheu, pelo mesmo envio da tela "Atribuir Processo"; e incluir como documentos externos os arquivos que você soltou na árvore, pelo mesmo envio da tela "Registrar Documento Externo". Em "Iniciar processo" e "Incluir Documento", escolher o tipo só abre o formulário do SEI: nada é criado até você salvar lá.</p>
+<p>A extensão não salva, assina, tramita nem envia nada no SEI por conta própria. As poucas gravações acontecem só pelo seu clique e repetem o que a tela do SEI faria: salvar uma anotação que você escreveu; repassar ao botão "Assinar" do SEI os documentos que você selecionou e, na janela de vários blocos, repassar ao ícone "Assinar" da linha o bloco que você escolheu assinar (a senha é pedida pelo próprio SEI); atribuir o processo à pessoa que você escolheu, pelo mesmo envio da tela "Atribuir Processo"; na tela "Enviar Processo", com "Remover marcadores" ou "Remover atribuição" marcada, retirar da sua unidade os marcadores e a atribuição de cada processo enviado, pelos mesmos envios das telas "Gerenciar Marcador" e "Atribuir Processo", antes de o SEI enviar (se algo falhar, nada é enviado); e incluir como documentos externos os arquivos que você soltou na árvore, pelo mesmo envio da tela "Registrar Documento Externo". Em "Iniciar processo" e "Incluir Documento", escolher o tipo só abre o formulário do SEI: nada é criado até você salvar lá.</p>
 
 <h2>Como apagar seus dados</h2>
 <ul>
