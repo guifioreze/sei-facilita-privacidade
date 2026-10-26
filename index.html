@@ -28,23 +28,24 @@
 <body>
 <main>
 <h1>Política de privacidade do SEI Facilita</h1>
-<p class="nota">Vigente desde 25 de outubro de 2026 (versão 0.20.1; a anterior valia desde 24 de outubro de 2026). Extensão do Chrome não oficial, criada por Guilherme Fioreze Santos, servidor do Tribunal de Justiça do Estado do Rio Grande do Sul (TJRS), lotado na GP-ASSEST, sem vínculo oficial com o TJRS nem com os mantenedores do SEI.</p>
+<p class="nota">Vigente desde 26 de outubro de 2026 (versão 0.20.2; a anterior valia desde 25 de outubro de 2026). Extensão do Chrome não oficial, criada por Guilherme Fioreze Santos, servidor do Tribunal de Justiça do Estado do Rio Grande do Sul (TJRS), lotado na GP-ASSEST, sem vínculo oficial com o TJRS nem com os mantenedores do SEI.</p>
 
 <h2>Em resumo</h2>
 <ul>
   <li>A extensão funciona inteiramente no seu navegador. <strong>Não existe servidor da extensão</strong>: nada é enviado ao autor nem a terceiros.</li>
   <li>Ela lê as telas do SEI do TJRS na sua própria sessão, só para as funções que você usa.</li>
-  <li>O conteúdo de processos e documentos fica <strong>apenas na memória</strong> da aba e só sai do navegador quando você manda: para o Copilot do tribunal, para a GAIA Minuta ou para uma pasta do seu computador.</li>
+  <li>O conteúdo de processos e documentos fica <strong>apenas na memória</strong> da aba e só sai do navegador quando você manda: para o Copilot do tribunal, para a GAIA Minuta, para uma pasta do seu computador ou, no "Levar ao Planner", só o número, a especificação e o prazo do processo, para o Planner do tribunal.</li>
   <li>Preferências e marcas pessoais ficam no armazenamento do Chrome, na sua conta.</li>
   <li>Não há anúncios, rastreamento, análise de uso nem venda de dados.</li>
 </ul>
 
 <h2>Onde a extensão atua</h2>
-<p>Só em três endereços, todos do ambiente de trabalho do TJRS:</p>
+<p>Só nestes endereços, todos do ambiente de trabalho do TJRS:</p>
 <ul>
   <li><code>sei.tjrs.jus.br</code>: o SEI do TJRS, onde a extensão melhora as telas (lista de processos, prazos, árvore, editor, bloco de assinatura) e lê processos para enviar à IA;</li>
   <li><code>copilot.cloud.microsoft</code>: o Copilot do Microsoft 365 contratado pelo tribunal, onde a extensão anexa o pacote que você pediu para enviar e, quando você clica em "Levar ao SEI", lê a minuta da resposta para inseri-la no editor do SEI;</li>
-  <li><code>gaiaminuta.tjrs.jus.br</code>: a GAIA Minuta do TJRS, com o mesmo papel.</li>
+  <li><code>gaiaminuta.tjrs.jus.br</code>: a GAIA Minuta do TJRS, com o mesmo papel;</li>
+  <li><code>planner.cloud.microsoft</code>: o Planner do Microsoft 365 do tribunal, só se você cadastrar um plano nas opções (o Chrome pede a sua permissão nesse momento), e só na aba que a extensão abre quando você clica em "Abrir no Planner", para preencher a nova tarefa.</li>
 </ul>
 <p>Em qualquer outro site a extensão não roda e não lê nada.</p>
 
@@ -57,6 +58,7 @@
     <tr><td>Nome, cargo, chefia e instruções da unidade que você digita nas opções</td><td>Assinar as minutas e orientar a IA com o que é próprio da sua unidade</td><td>Sim, no armazenamento do Chrome (sincronizado pela sua conta).</td></tr>
     <tr><td>Seu usuário e sua unidade no SEI (lidos da tela)</td><td>Filtrar "meus processos" e preencher o pacote</td><td>Sim, no armazenamento local do Chrome, neste computador.</td></tr>
     <tr><td>Telas dos blocos de assinatura (lidas uma de cada vez, só na tela "Blocos de Assinatura")</td><td>Mostrar quantos documentos de cada bloco estão sem assinatura</td><td>Não. Só a contagem, na memória da aba aberta.</td></tr>
+    <tr><td>Número, especificação e prazo do Controle de Prazos do processo que você leva ao Planner</td><td>Preencher o nome e o prazo da nova tarefa no plano que você escolheu, quando você clica em "Abrir no Planner"</td><td>Não. Ficam só na tarefa, se você clicar em "Adicionar tarefa" no Planner.</td></tr>
     <tr><td>Arquivos que você solta na árvore do processo</td><td>Incluí-los no processo como documentos externos, pelo mesmo envio da tela "Registrar Documento Externo" do SEI, quando você clica em "Incluir"</td><td>Não. Vão direto ao SEI, na sua sessão.</td></tr>
     <tr><td>Minuta de uma resposta do Copilot (entre as marcas de início e fim, ou o trecho que você selecionou)</td><td>Inseri-la no documento aberto no editor do SEI que você escolhe, quando você clica em "Levar ao SEI"</td><td>Não. Só na memória, até entrar no editor; nada é salvo no SEI.</td></tr>
     <tr><td>Marcadores e atribuição, na sua unidade, dos processos que você envia (telas "Gerenciar Marcador" e árvore de cada processo)</td><td>Retirá-los antes do envio, quando você marca "Remover marcadores" ou "Remover atribuição" na tela "Enviar Processo"</td><td>Não. Só na memória, durante o envio.</td></tr>
@@ -69,6 +71,7 @@
 <p>Só para o destino que você escolhe, e só quando você clica:</p>
 <ul>
   <li><strong>Copilot do tribunal</strong> ou <strong>GAIA Minuta</strong>: a extensão anexa os arquivos e o texto do prompt na página aberta. O envio de fato continua sendo seu: a extensão não clica em Enviar nem em Gerar. O tratamento dos dados nesses serviços segue as regras do TJRS e dos próprios serviços.</li>
+  <li><strong>Planner</strong>: a extensão abre o plano que você escolheu e preenche o nome da tarefa (número do processo e especificação) e o prazo. Quem cria a tarefa é você, clicando em "Adicionar tarefa"; a extensão não clica nele. Documentos não vão ao Planner.</li>
   <li><strong>Pasta do computador</strong>: em "Exportar pacote", os arquivos são gravados em <code>Downloads/sei-facilita/</code>, e o registro desses downloads é apagado do histórico do Chrome (os arquivos ficam).</li>
   <li><strong>Cópia de segurança</strong> (nas opções): "Baixar cópia de tudo" grava num arquivo JSON, na pasta de downloads, o que a extensão guarda para você (opções, prompts, dados das minutas, favoritos, histórico de visitados, etiquetas, marcas e cores). O arquivo tem números e tipos de processos: guarde-o com cuidado. "Substituir tudo por uma cópia…" lê um arquivo desses que você escolhe e, antes, baixa uma cópia do que havia. Nada disso vai a outro lugar.</li>
 </ul>
@@ -76,6 +79,7 @@
 <h2>O que fica guardado no Chrome</h2>
 <p>No armazenamento da extensão (o Chrome sincroniza entre os seus computadores quando a sincronização está ligada na sua conta):</p>
 <ul>
+  <li>os planos do Planner que você cadastrou (nome e link);</li>
   <li>opções da extensão (funções ligadas, ordem e agrupamento da lista, largura da árvore, destino padrão, modelo do Copilot);</li>
   <li>seus prompts editados e criados;</li>
   <li>os dados que você digita em "Seus dados nas minutas": seu nome e cargo, o nome e o cargo da sua chefia e as instruções da sua unidade. Eles entram nos prompts e nos pacotes que você envia à IA;</li>
